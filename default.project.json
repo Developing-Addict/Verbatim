@@ -1,25 +1,16 @@
 {
-	"name": "Verbatim",
-	"globIgnorePaths": [
-		"**/package.json",
-		"**/tsconfig.json"
-	],
-	"tree": {
-		"$className": "DataModel",
-		"ServerStorage": {
-			"$className": "ServerStorage",
-			"Verbatim": {
-				"$path": "out/verbatim"
-			}
-		},
-		"ReplicatedStorage": {
-            "$className": "ReplicatedStorage",
-            "rbxts_include": {
-                "$path": "include",
-                "node_modules": {
-                    "$path": "node_modules/@rbxts"
-                }
-            }
+  "name": "Verbatim",
+  "tree": {
+    "$className": "DataModel",
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "MainModule": {
+        "$path": "src",
+        "$className": "ModuleScript",
+        "$properties": {
+          "Source": "return require(script.Verbatim :: Instance);"
         }
-	}
+      }
+    }
+  }
 }
